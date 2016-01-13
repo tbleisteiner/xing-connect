@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<script type="text/javascript">
+
+	(function () {
+		console.log('init listeners');
+
+		window.addEventListener("message", receiveMessage, false);
+
+		function receiveMessage(event)
+		{
+			var container = document.getElementById('superid');
+
+			container.innerText = event.data;
+		  	console.debug(event);
+		}
+
+		window.open('http://127.0.0.1:4321/api/auth', '_blank');
+		
+	})();
+
+
+	</script>
+
+</head>
+<body>
+
+	<code id="superid"></code>
+
+	<form method="GET" action="http://127.0.0.1:4321/api/xing/search">
+		<input type="text" name="emails" placeholder="emails" value="thilo.bleisteiner@outlook.com">
+		<button type="submit">Go Baby Go</button>
+	</form>
+
+
+</body>
+</html>

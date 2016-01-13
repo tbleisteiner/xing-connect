@@ -4,10 +4,13 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
+    "body-parser": "^1.14.2",
     "cookie-parser": "^1.4.1",
     "express": "*",
     "express-session": "^1.13.0",
+    "oauth": "^0.9.14",
     "passport": "^0.3.2",
-    "passport-xing": "^0.1.5"
+    "passport-xing": "^0.1.5",
+    "request": "^2.67.0"
   }
 }

@@ -43,11 +43,16 @@ exports.init = function(app) {
     app.get('/api/auth', passport.authenticate('xing'));
 
     app.get('/api/callback', passport.authenticate('xing'), function(req, res) {
-        res.send(JSON.stringify({
-                token: req.user.token,
-                secret: req.user.secret
-            }
+        // res.send(JSON.stringify({
+        //         token: req.user.token,
+        //         secret: req.user.secret
+        //     }));
 
-        ));
+        global.user = req.user;
+
+        res.send('<script>window.opener.postMessage(\'' + JSON.stringify({
+            token: req.user.token,
+            secret: req.user.secret
+        }) + '\',\'*\'); window.close();</script>');
     });
 };
