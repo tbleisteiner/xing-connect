@@ -1,0 +1,13 @@
+{
+  "name": "xing-connect-grunt",
+  "version": "0.0.1",
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-config": "^0.4.0",
+    "grunt-connect-proxy": "*",
+    "grunt-contrib-connect": "^0.11.2",
+    "grunt-este-watch": "*",
+    "serve-static": "*"
+  },
+  "dependencies": {}
+}

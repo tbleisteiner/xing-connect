@@ -1,0 +1,13 @@
+{
+  "name": "xing-connect-api",
+  "description": "",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "cookie-parser": "^1.4.1",
+    "express": "*",
+    "express-session": "^1.13.0",
+    "passport": "^0.3.2",
+    "passport-xing": "^0.1.5"
+  }
+}
